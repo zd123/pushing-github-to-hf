@@ -1,13 +1,14 @@
 ---
-title: Pushing Github To Hf
+title: Syncing Github To Huggingface
 emoji: 📚
-colorFrom: red
-colorTo: indigo
-sdk: gradio
-sdk_version: 5.28.0
+colorFrom: yellow
+colorTo: red
+sdk: streamlit
+sdk_version: 1.45.0
 app_file: app.py
 pinned: false
-short_description: pushing-github-to-hf
+license: mit
+short_description: syncing-github-to-huggingface
 ---
 
 # Linking and Pushing Github Repo to Huggingface Space

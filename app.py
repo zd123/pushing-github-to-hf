@@ -1,10 +1,9 @@
 import streamlit as st
 from huggingface_hub import InferenceClient
-
+import os
 
 # MUST SET HF_TOKEN IN STREAMLIT SETTINGS IN HUGGINGFACE REPO SECRETS
-HF_TOKEN = st.secrets["HF_TOKEN"]
-
+HF_TOKEN = os.environ["HF_TOKEN"]
 
 # INIT THE INFERENCE CLIENT WITH YOUR HF TOKEN
 client = InferenceClient(

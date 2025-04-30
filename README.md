@@ -35,24 +35,25 @@ Must have:
 
 ### Linking Github to HF
 Get URL of your huggingface space 
-```
+```bash
 https://huggingface.co/spaces/HF_USERNAME/SPACE_NAME
 
-https://huggingface.co/spaces/KingZack/pushing-github-to-hf
-
+https://huggingface.co/spaces/KingZack/syncing-github-to-huggingface
 ```
 
 
 ### Set Github remote to your HuggingFace space
 
 ```bash
-git remote add space https://huggingface.co/spaces/KingZack/pushing-github-to-hf
+git remote add space https://huggingface.co/spaces/KingZack/syncing-github-to-huggingface```
 ```
 
 ### Push what is in your Github to HuggingFace
+
 ```bash
 git push --force space main
 ```
+
 
 ### FIN :) 
 * Dont forget, everytime you push to github you also have to push to huggingface by doing:

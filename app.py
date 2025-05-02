@@ -6,6 +6,7 @@ from huggingface_hub import InferenceClient
 HF_TOKEN = st.secrets["HF_TOKEN"]
 
 
+
 # INIT THE INFERENCE CLIENT WITH YOUR HF TOKEN
 client = InferenceClient(
     provider="hf-inference",
@@ -18,6 +19,7 @@ user_input = st.text_input(
     "This is a placeholder",
     key="placeholder",
 )
+
 
 # THIS IS THE INFERENCE CLIENT CALL
 completion = client.chat.completions.create(
@@ -39,6 +41,17 @@ st.text(ai_response)
 
 
 ### WRONG WAY TO TRY AND LOAD MODELS::: 
+## THESE WILL TRY AND DOWNLOAD AND LOAD THE MODEL EVERY TIME SOMEONE VISITS THE APP
+
+### PIPELINE WAY
+# from transformers import pipeline
+# messages = [
+#     {"role": "user", "content": "Who are you?"},
+# ]
+# pipe = pipeline("text-generation", model="HuggingFaceH4/zephyr-7b-beta")
+# pipe(messages)
+
+### DIRECT WAY
 # Load model directly
 # from transformers import AutoTokenizer, AutoModelForCausalLM
 

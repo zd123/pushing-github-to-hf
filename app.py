@@ -21,7 +21,7 @@ user_input = st.text_input(
 
 # THIS IS THE INFERENCE CLIENT CALL
 completion = client.chat.completions.create(
-    model="deepseek-ai/DeepSeek-R1",
+    model="HuggingFaceH4/zephyr-7b-beta",
     messages=[
         {
             "role": "user",

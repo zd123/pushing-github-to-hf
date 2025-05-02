@@ -8,7 +8,7 @@ HF_TOKEN = st.secrets["HF_TOKEN"]
 
 # INIT THE INFERENCE CLIENT WITH YOUR HF TOKEN
 client = InferenceClient(
-    provider="fireworks-ai",
+    provider="hf-inference",
     api_key=HF_TOKEN,
 )
 
